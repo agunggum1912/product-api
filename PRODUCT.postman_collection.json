@@ -1,0 +1,1735 @@
+{
+	"info": {
+		"_postman_id": "1555087d-4cfb-4be4-ac32-9df83e9cbda9",
+		"name": "PRODUCT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14102828"
+	},
+	"item": [
+		{
+			"name": "Before Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@viscomm.com",
+									"description": "required|email",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"description": "required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "admin@viscomm.com",
+											"description": "required|email",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"description": "required",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:8001"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Aug 2023 11:41:14 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Aug 2023 11:41:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"id\": \"eyJpdiI6ImVubjkwaFlFU1p5SWxYaG8rdm01SVE9PSIsInZhbHVlIjoidnR2cUNjZDVVd2JGMVc1TjNFR3d0UT09IiwibWFjIjoiZTAyMmNmMzllODY5YTNkM2ZlYmIyOTg2MTQzNGI5YjhmODc1OTU4ZDc0ODNmMTBiYjVkZjljYzViMGViODZiOSIsInRhZyI6IiJ9\",\n        \"email\": \"admin@viscomm.com\",\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDEvYXBpL2xvZ2luIiwiaWF0IjoxNjkyNzA0NDc0LCJleHAiOjE2OTI3MDgwNzQsIm5iZiI6MTY5MjcwNDQ3NCwianRpIjoiNVhVV3NJM0plVFllbndMRCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.231qG9g4jbXr05U4RjAF27dURr8QxqhBFgSlzTy8m_Q\",\n        \"token_type\": \"bearer\",\n        \"expires_in\": 3600\n    },\n    \"message\": \"Login successfully!\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "After Login",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "Get Profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/get_profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"get_profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Refresh Token",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/refresh",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"refresh"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Product",
+							"item": [
+								{
+									"name": "Get List Product",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/product/get_list?page&per_page&search=&order_by&sort",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"product",
+												"get_list"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": null,
+													"description": "integer|optional, default=1"
+												},
+												{
+													"key": "per_page",
+													"value": null,
+													"description": "integer|optional, default=10"
+												},
+												{
+													"key": "search",
+													"value": "",
+													"description": "optional"
+												},
+												{
+													"key": "order_by",
+													"value": null,
+													"description": "optional|in:name,pricedefault: name"
+												},
+												{
+													"key": "sort",
+													"value": null,
+													"description": "optional|in:asc,desc default: asc"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/product/get_list?page&per_page&search=&order_by&sort",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"product",
+														"get_list"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": null,
+															"description": "integer|optional, default=1"
+														},
+														{
+															"key": "per_page",
+															"value": null,
+															"description": "integer|optional, default=10"
+														},
+														{
+															"key": "search",
+															"value": "",
+															"description": "optional"
+														},
+														{
+															"key": "order_by",
+															"value": null,
+															"description": "optional|in:name,pricedefault: name"
+														},
+														{
+															"key": "sort",
+															"value": null,
+															"description": "optional|in:asc,desc default: asc"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 11:46:35 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 11:46:35 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"total\": 200,\n        \"data_list\": [\n            {\n                \"id\": \"eyJpdiI6IjF4dFFOa0lwMVdGdk4zYmYwZDlsVGc9PSIsInZhbHVlIjoiY2pUYytOUHFLcnd0ZXVnSFZRWEt6Zz09IiwibWFjIjoiZDRmYTg4YzFkY2JhMmQxY2JiM2FhMzIzZDVkOGQyOTI3ZWRiN2ExNjI1YjYzNDUxNjEyYWI5Njg3NGM3NDFkZCIsInRhZyI6IiJ9\",\n                \"name\": \"A officia ut quis ut quos.\",\n                \"price\": 19072,\n                \"image\": \"https://via.placeholder.com/640x480.png/0044cc?text=labore\"\n            },\n            {\n                \"id\": \"eyJpdiI6IjJzTWRadXRVVFQwbEtXSW4yM3RidUE9PSIsInZhbHVlIjoiM1FuM0pnR2hYV1AwQXpoVG9mdzllUT09IiwibWFjIjoiMzZmNGU1NDQxNTY5MzJhMDdkYmFjNTc1MDVjOTI0OThmMjY4NDlmN2I1NGExYjU2OTExZTlhMWM4NjFhMTRkOSIsInRhZyI6IiJ9\",\n                \"name\": \"Ab voluptate aut est totam expedita.\",\n                \"price\": 37585,\n                \"image\": \"https://via.placeholder.com/640x480.png/009933?text=incidunt\"\n            },\n            {\n                \"id\": \"eyJpdiI6ImcyN2JiN0hxVEdHcmJrUktCR29xT2c9PSIsInZhbHVlIjoibzZrWXRwVEt4cnordjE4UzNIeFRJUT09IiwibWFjIjoiMzk0N2NmMWNkMDNhMzIxODZhMzQ2MTdkNzA0Y2U2NmIxNWM4ZGY2YjEzMDFlNTZhYjZmMjljZDQ5ZTU1NjU0MCIsInRhZyI6IiJ9\",\n                \"name\": \"Adipisci quae laboriosam ducimus quia.\",\n                \"price\": 48084,\n                \"image\": \"https://via.placeholder.com/640x480.png/00ddbb?text=eum\"\n            },\n            {\n                \"id\": \"eyJpdiI6Iko3VlZNMk9WSnVmVm10d3RZTHB2S3c9PSIsInZhbHVlIjoib0wyT2tpK0c1eHZBTnJWQ3AvdGxaZz09IiwibWFjIjoiM2M2YjVhOTVhOTRiOWM1ODg2NmQ5YWEzOGFiNmNlM2E5ZmFhY2I3OTBlYmU3ZGU3Nzg2MzM3MWUwMjk4N2M2YiIsInRhZyI6IiJ9\",\n                \"name\": \"Adipisci qui qui est possimus.\",\n                \"price\": 29802,\n                \"image\": \"https://via.placeholder.com/640x480.png/00cc55?text=ea\"\n            },\n            {\n                \"id\": \"eyJpdiI6Ims2ZWo0SGoxcDJNRkUzY1RkdzI2VEE9PSIsInZhbHVlIjoiTC8yazJjY3N2a0tSRkpNZmlxWDlNUT09IiwibWFjIjoiNWM1YmI0YjZkMmY2NWE0OTUyNDdmMmIxZDYyMzg4Y2EzMzM4MDg5MmZjZTVjODg0YjhhZWQwNWEwNWQ1Njc5MiIsInRhZyI6IiJ9\",\n                \"name\": \"Aliquid doloremque occaecati doloribus assumenda.\",\n                \"price\": 71612,\n                \"image\": \"https://via.placeholder.com/640x480.png/00ddaa?text=veritatis\"\n            },\n            {\n                \"id\": \"eyJpdiI6ImpvSUZZS200MDN1YzlEV3QydGlyTkE9PSIsInZhbHVlIjoicUlaQmFZd0k2aUlKRTY4aW1BWHRKdz09IiwibWFjIjoiOGQ1YTc0YmYyNmI2MDA5NWIwNGM5MmMyZDUwNzhjZjgzOGEzMDFjMWI4NzQzOGRkMWQ1ODY2ZTIyODkwODNmMSIsInRhZyI6IiJ9\",\n                \"name\": \"Amet impedit et et sint.\",\n                \"price\": 6438,\n                \"image\": \"https://via.placeholder.com/640x480.png/0000ee?text=dolorem\"\n            },\n            {\n                \"id\": \"eyJpdiI6IjNqU1U1VFN5ZHlvci9TS1RDYitLL0E9PSIsInZhbHVlIjoidjYxT2N3RCtWL2dKcWErSXViWGFNQT09IiwibWFjIjoiOGM3MjY0OTIwMGQ3ODk2YzliODUwMGE1YzYwMWE5MTI5YWFjZTE1ODllOTRmZmQxYzdlYjUyNmJkYzcyNDZmYiIsInRhZyI6IiJ9\",\n                \"name\": \"Animi quidem autem ut rem et earum minima facere.\",\n                \"price\": 99376,\n                \"image\": \"https://via.placeholder.com/640x480.png/002277?text=vitae\"\n            },\n            {\n                \"id\": \"eyJpdiI6IkVjS21QRlNKUWlObG1mdk9zYkFHd3c9PSIsInZhbHVlIjoiRzFzYTN2Mk5kQnhrbExvbEQ0VnduQT09IiwibWFjIjoiY2MwZWFlNjdjYTNkYjJjODdhYWI4MGRkZTBkMzMwMThiZTM2Mjc5MmZiMWQ2NGJkZmIyOTMzMzRmNjZlMmI5YiIsInRhZyI6IiJ9\",\n                \"name\": \"Aperiam consectetur tenetur ut sunt voluptas quibusdam numquam.\",\n                \"price\": 64576,\n                \"image\": \"https://via.placeholder.com/640x480.png/00aa33?text=dolores\"\n            },\n            {\n                \"id\": \"eyJpdiI6IjdjRmVSTlJaTE1sNUJkZzFFWTJ3dFE9PSIsInZhbHVlIjoieE8vbmhiZ2IvZHpZRVFVZUJOeW44QT09IiwibWFjIjoiNzZiYjYxOThiMTBhMzI3MmY2MjljZWRhOGE1MWQyOTc3NWQ0ZjA2NmQwMWJkYzdkMzg1YzMwY2YzMjZlMjkwNiIsInRhZyI6IiJ9\",\n                \"name\": \"Aperiam nihil vel magnam deleniti quisquam rerum ratione.\",\n                \"price\": 84896,\n                \"image\": \"https://via.placeholder.com/640x480.png/00ccee?text=rerum\"\n            },\n            {\n                \"id\": \"eyJpdiI6IkZFcVhxZ2ZPL1MySE1CQWlkK1QyNEE9PSIsInZhbHVlIjoiaXZwWEMyUEtzUXJZekY1REhiVmVvUT09IiwibWFjIjoiYThhNTkyYzhhOGU0OTkxOThmZDdlMDYxYzY3NDhhMzI3ZjAzOGFhNmU5YzYyMWZkODI3NWZkOTNmOWM5YjBmYSIsInRhZyI6IiJ9\",\n                \"name\": \"Aspernatur aut non debitis fugiat vero ea maxime est.\",\n                \"price\": 21809,\n                \"image\": \"https://via.placeholder.com/640x480.png/004433?text=voluptas\"\n            }\n        ]\n    },\n    \"message\": \"Get data book successfully.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Add",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Test2",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "200002",
+													"description": "required|integer",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "https://via.placeholder.com/640x480.png/006644?text=voluptates",
+													"description": "required|url image",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/product/add",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"product",
+												"add"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Example",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "name",
+															"value": "Test2",
+															"description": "required",
+															"type": "text"
+														},
+														{
+															"key": "price",
+															"value": "200002",
+															"description": "required|integer",
+															"type": "text"
+														},
+														{
+															"key": "image",
+															"value": "https://via.placeholder.com/640x480.png/006644?text=voluptates",
+															"description": "required|url image",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/product/add",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"product",
+														"add"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 11:48:40 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 11:48:40 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 201,\n    \"data\": null,\n    \"message\": \"Create product successfully.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Edit",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "aaa",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "2000",
+													"description": "required|integer",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "https://via.placeholder.com/640x480.png/0044cc?text=222",
+													"description": "required|url",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/admin/product/edit/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"product",
+												"edit",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eyJpdiI6InpVQW8ydU5hUDIzTGlyK2hWakN0U1E9PSIsInZhbHVlIjoid0t2MmpwTmhmLzBkS0kwcGl5emY5QT09IiwibWFjIjoiMzZhNmZlNDg4YmE0ZWI5NDYyOGE2ZGE0ZDYzNmQwMjYyOWI3Y2Y3NWNiOWMwNTk3NTdjY2IwNTM3YTBmNzBkZSIsInRhZyI6IiJ9"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Edit",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "id",
+															"value": "eyJpdiI6InpVQW8ydU5hUDIzTGlyK2hWakN0U1E9PSIsInZhbHVlIjoid0t2MmpwTmhmLzBkS0kwcGl5emY5QT09IiwibWFjIjoiMzZhNmZlNDg4YmE0ZWI5NDYyOGE2ZGE0ZDYzNmQwMjYyOWI3Y2Y3NWNiOWMwNTk3NTdjY2IwNTM3YTBmNzBkZSIsInRhZyI6IiJ9",
+															"type": "text"
+														},
+														{
+															"key": "name",
+															"value": "aaa",
+															"description": "required",
+															"type": "text"
+														},
+														{
+															"key": "price",
+															"value": "2000",
+															"description": "required|integer",
+															"type": "text"
+														},
+														{
+															"key": "image",
+															"value": "https://via.placeholder.com/640x480.png/0044cc?text=222",
+															"description": "required|url",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/product/edit/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"product",
+														"edit",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "eyJpdiI6InpVQW8ydU5hUDIzTGlyK2hWakN0U1E9PSIsInZhbHVlIjoid0t2MmpwTmhmLzBkS0kwcGl5emY5QT09IiwibWFjIjoiMzZhNmZlNDg4YmE0ZWI5NDYyOGE2ZGE0ZDYzNmQwMjYyOWI3Y2Y3NWNiOWMwNTk3NTdjY2IwNTM3YTBmNzBkZSIsInRhZyI6IiJ9"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 13:55:55 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 13:55:55 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "58"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 201,\n    \"data\": null,\n    \"message\": \"Update product successfully.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/product/delete/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"product",
+												"delete",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eyJpdiI6InpVQW8ydU5hUDIzTGlyK2hWakN0U1E9PSIsInZhbHVlIjoid0t2MmpwTmhmLzBkS0kwcGl5emY5QT09IiwibWFjIjoiMzZhNmZlNDg4YmE0ZWI5NDYyOGE2ZGE0ZDYzNmQwMjYyOWI3Y2Y3NWNiOWMwNTk3NTdjY2IwNTM3YTBmNzBkZSIsInRhZyI6IiJ9"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "New Request",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/product/delete/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"product",
+														"delete",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "eyJpdiI6InpVQW8ydU5hUDIzTGlyK2hWakN0U1E9PSIsInZhbHVlIjoid0t2MmpwTmhmLzBkS0kwcGl5emY5QT09IiwibWFjIjoiMzZhNmZlNDg4YmE0ZWI5NDYyOGE2ZGE0ZDYzNmQwMjYyOWI3Y2Y3NWNiOWMwNTk3NTdjY2IwNTM3YTBmNzBkZSIsInRhZyI6IiJ9"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 13:57:51 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 13:57:51 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "57"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 400,\n    \"data\": null,\n    \"message\": \"Product deleted successfully.\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "User",
+							"item": [
+								{
+									"name": "Get List User",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": [
+										{
+											"name": "New Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/user/get_list?page&per_page&search=&order_by&sort",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"user",
+														"get_list"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": null
+														},
+														{
+															"key": "per_page",
+															"value": null
+														},
+														{
+															"key": "search",
+															"value": ""
+														},
+														{
+															"key": "order_by",
+															"value": null
+														},
+														{
+															"key": "sort",
+															"value": null
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 14:09:29 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 14:09:29 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"total\": 21,\n        \"data_list\": [\n            {\n                \"id\": \"eyJpdiI6Ik5MaVRyUTNzWVdvWWEzZERoQU44L3c9PSIsInZhbHVlIjoiRHpnSG8xMVA2Wm9KU0lyNi9uWG1LUT09IiwibWFjIjoiZTk5Y2I4NTkxYjkwOTFmMWViY2M0NzVhZWYwZDI4NzIxMDViYmRlMWYzZDEzNTgzMGU2ODFjNmVjZjUzY2ZmMiIsInRhZyI6IiJ9\",\n                \"name\": \"Admin User\",\n                \"email\": \"admin@viscomm.com\",\n                \"role\": \"Admin\",\n                \"kode_role\": 1\n            },\n            {\n                \"id\": \"eyJpdiI6IkdjZnlybE1wUTBZQ2U1Ulc3bFpqVHc9PSIsInZhbHVlIjoiV0RxNEJOUnhKMVhXWUFsU3NDc2NEZz09IiwibWFjIjoiN2Q4NTZmY2QwYTgxNGQ2MjkwYTRlZmQ0MDQ4N2VkNGRhNGRmMjNiY2QyMDU3MTc5MDNhY2I3ZjllZjZhZDFlOSIsInRhZyI6IiJ9\",\n                \"name\": \"Anissa Jacobi\",\n                \"email\": \"edd65@example.net\",\n                \"role\": \"Admin\",\n                \"kode_role\": 1\n            },\n            {\n                \"id\": \"eyJpdiI6Imh1eE53RnRmdlBxVXZuY28wRnBmUEE9PSIsInZhbHVlIjoiTnN2OElaSE5tL0lzbWhNR0RjbWJ3dz09IiwibWFjIjoiZjY1ZWM0NGM5YzQ2YjkwZTAzNGYwMTQyNWNmYjNmMmI4ZTQzM2NkMTA5NGI4MTM1N2U4NmQ2ZTg3ZDJkM2IwZCIsInRhZyI6IiJ9\",\n                \"name\": \"Breana Hamill Sr.\",\n                \"email\": \"zschimmel@example.org\",\n                \"role\": \"User\",\n                \"kode_role\": 2\n            },\n            {\n                \"id\": \"eyJpdiI6Im5jcGNVTWdsQWJIZjhFbUp0RFJIQVE9PSIsInZhbHVlIjoiNnBPWlMvVzFJRmhtRlJxNThyRFk1UT09IiwibWFjIjoiOTQ1NjYwNzdkNzY2ODYzOWMzYzI2OTcyNzUzZDRkOTBiMDUxNzVhZjFhNTgyNmMzODU5NGFlYWRmZTVhN2U3YiIsInRhZyI6IiJ9\",\n                \"name\": \"Chanelle Daugherty II\",\n                \"email\": \"emmerich.stan@example.com\",\n                \"role\": \"User\",\n                \"kode_role\": 2\n            },\n            {\n                \"id\": \"eyJpdiI6InhCM3lyKy9CaGQ2dlZHdXNTM0ZlUnc9PSIsInZhbHVlIjoiQ20yOW9WV2s4SHdpMzY4aVFoazNWZz09IiwibWFjIjoiYjJlYjNjMWEwYTJlM2NhY2I5ZTM0YTNiMDc4ZWMxNTljNGI3ZGFhZWFkYTY5Y2U4MDA3YjhkZjFmN2Y4ZmM5NyIsInRhZyI6IiJ9\",\n                \"name\": \"Dr. Alycia Torp\",\n                \"email\": \"maureen.ullrich@example.net\",\n                \"role\": \"User\",\n                \"kode_role\": 2\n            },\n            {\n                \"id\": \"eyJpdiI6IjZmZDBYWjlKaXZ0VGd1azM2UGtWUFE9PSIsInZhbHVlIjoiM1NUNklHUzhwUHN4UElIRGFOYXRxdz09IiwibWFjIjoiNWY4YjIzMzQ3MDUzZDI5ZmM1NDNhY2RiYzU1NzIxYzZkMDJjYzAwNTI3NjQxN2RkOWE1MjY2MjVhOTkzMDFhMCIsInRhZyI6IiJ9\",\n                \"name\": \"Dr. Nya Gaylord\",\n                \"email\": \"coby.ratke@example.net\",\n                \"role\": \"Admin\",\n                \"kode_role\": 1\n            },\n            {\n                \"id\": \"eyJpdiI6IlhCY3hlcStvamJyRDEvdnZzR3BDVWc9PSIsInZhbHVlIjoiR1h4RVNVSnpBMk1yRXdrb3NqV2piUT09IiwibWFjIjoiMzE5OGYzMDIzZDkxOTljMGYzOWFlMTYyNzAzYTlhNTAyZDRlMTVlMjlmYThlMzMwNTAyZjcxNWIzYTJlYWRlNSIsInRhZyI6IiJ9\",\n                \"name\": \"Eunice Stokes\",\n                \"email\": \"naomi05@example.net\",\n                \"role\": \"Admin\",\n                \"kode_role\": 1\n            },\n            {\n                \"id\": \"eyJpdiI6Ii9CSEVjRDE4QnB4V3FEWHdEYU5SV0E9PSIsInZhbHVlIjoibDdiNXpZTTNDMXBoVjZWQzVtYnl0Zz09IiwibWFjIjoiODEzNjZiZDQ5Yjc5ZDMxOWM3OGY2ODJjNGNlMzU3MWNiZTAzNDM0YzljYmI4NGM0YmQ4M2JhMDkyODRmZGZiYiIsInRhZyI6IiJ9\",\n                \"name\": \"Haylee Kertzmann\",\n                \"email\": \"geovanni.walker@example.net\",\n                \"role\": \"Admin\",\n                \"kode_role\": 1\n            },\n            {\n                \"id\": \"eyJpdiI6IjNSK0lxajBIT2NybHZjdlN3UXk1anc9PSIsInZhbHVlIjoibDhuRlowa2VzM0tzTnhzZFJDbUVnQT09IiwibWFjIjoiMzE3MTYzNDUzNGIxYmYxYTk1MzVmZDVmMzIyZGVkODU0OWQ5OWExYjFkZmViYWRhZjVlYjdlYWE5MmQwZTY4MyIsInRhZyI6IiJ9\",\n                \"name\": \"Jayden Harvey\",\n                \"email\": \"sreynolds@example.net\",\n                \"role\": \"Admin\",\n                \"kode_role\": 1\n            },\n            {\n                \"id\": \"eyJpdiI6Ijc3eTBEMWZvUzN6RGwxZC9hVkxiRVE9PSIsInZhbHVlIjoiOEpvMlBZMS9LVGtyaVVSNlZtRGlmUT09IiwibWFjIjoiMGUzNGMxNWVmZThkYWEyNjc4NTc0YmMzNTA4M2YwZDRkYzZmYzhjNjAzODM5ZTIzNTIzNzFkZWU3ZjYyMDc5MCIsInRhZyI6IiJ9\",\n                \"name\": \"Kasandra Towne\",\n                \"email\": \"fcartwright@example.net\",\n                \"role\": \"Admin\",\n                \"kode_role\": 1\n            }\n        ]\n    },\n    \"message\": \"Get data user successfully.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Add",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/user/add",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"user",
+												"add"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "New Request",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "name",
+															"value": "Addda",
+															"description": "required",
+															"type": "text"
+														},
+														{
+															"key": "email",
+															"value": "test@test.com",
+															"description": "required|email|unique",
+															"type": "text"
+														},
+														{
+															"key": "password",
+															"value": "password",
+															"description": "required|confirmed",
+															"type": "text"
+														},
+														{
+															"key": "password_confirmation",
+															"value": "password",
+															"description": "required",
+															"type": "text"
+														},
+														{
+															"key": "role",
+															"value": "2",
+															"description": "required|in:1,2 | 1 = Admin, 2 = User",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/user/add",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"user",
+														"add"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 14:13:55 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 14:13:55 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "58"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 201,\n    \"data\": null,\n    \"message\": \"Create user successfully.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Edit",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": [
+										{
+											"name": "New Request",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "name",
+															"value": "nameeee",
+															"description": "required",
+															"type": "text"
+														},
+														{
+															"key": "email",
+															"value": "admin@admin.com",
+															"description": "required|email|unique",
+															"type": "text"
+														},
+														{
+															"key": "role",
+															"value": "1",
+															"description": "required|in:1,2",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/user/edit/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"user",
+														"edit",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "eyJpdiI6Ik5MaVRyUTNzWVdvWWEzZERoQU44L3c9PSIsInZhbHVlIjoiRHpnSG8xMVA2Wm9KU0lyNi9uWG1LUT09IiwibWFjIjoiZTk5Y2I4NTkxYjkwOTFmMWViY2M0NzVhZWYwZDI4NzIxMDViYmRlMWYzZDEzNTgzMGU2ODFjNmVjZjUzY2ZmMiIsInRhZyI6IiJ9"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 14:16:38 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 14:16:38 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 201,\n    \"data\": null,\n    \"message\": \"Update user successfully.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/user/delete/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"user",
+												"delete",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eyJpdiI6Ik5MaVRyUTNzWVdvWWEzZERoQU44L3c9PSIsInZhbHVlIjoiRHpnSG8xMVA2Wm9KU0lyNi9uWG1LUT09IiwibWFjIjoiZTk5Y2I4NTkxYjkwOTFmMWViY2M0NzVhZWYwZDI4NzIxMDViYmRlMWYzZDEzNTgzMGU2ODFjNmVjZjUzY2ZmMiIsInRhZyI6IiJ9"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "New Request",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/product/delete/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"product",
+														"delete",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "eyJpdiI6Ik5MaVRyUTNzWVdvWWEzZERoQU44L3c9PSIsInZhbHVlIjoiRHpnSG8xMVA2Wm9KU0lyNi9uWG1LUT09IiwibWFjIjoiZTk5Y2I4NTkxYjkwOTFmMWViY2M0NzVhZWYwZDI4NzIxMDViYmRlMWYzZDEzNTgzMGU2ODFjNmVjZjUzY2ZmMiIsInRhZyI6IiJ9"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 14:17:55 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 14:17:55 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 400,\n    \"data\": null,\n    \"message\": \"Product deleted successfully.\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Product",
+							"item": [
+								{
+									"name": "Get List Product",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/users/product/get_list?page&per_page&search=&order_by&sort",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"users",
+												"product",
+												"get_list"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": null,
+													"description": "integer|optional, default=1"
+												},
+												{
+													"key": "per_page",
+													"value": null,
+													"description": "integer|optional, default=10"
+												},
+												{
+													"key": "search",
+													"value": "",
+													"description": "optional"
+												},
+												{
+													"key": "order_by",
+													"value": null,
+													"description": "optional|in:name,pricedefault: name"
+												},
+												{
+													"key": "sort",
+													"value": null,
+													"description": "optional|in:asc,desc default: asc"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Example",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/product/get_list?page&per_page&search=&order_by&sort",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"product",
+														"get_list"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": null,
+															"description": "integer|optional, default=1"
+														},
+														{
+															"key": "per_page",
+															"value": null,
+															"description": "integer|optional, default=10"
+														},
+														{
+															"key": "search",
+															"value": "",
+															"description": "optional"
+														},
+														{
+															"key": "order_by",
+															"value": null,
+															"description": "optional|in:name,pricedefault: name"
+														},
+														{
+															"key": "sort",
+															"value": null,
+															"description": "optional|in:asc,desc default: asc"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 11:46:35 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 11:46:35 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 200,\n    \"data\": {\n        \"total\": 200,\n        \"data_list\": [\n            {\n                \"id\": \"eyJpdiI6IjF4dFFOa0lwMVdGdk4zYmYwZDlsVGc9PSIsInZhbHVlIjoiY2pUYytOUHFLcnd0ZXVnSFZRWEt6Zz09IiwibWFjIjoiZDRmYTg4YzFkY2JhMmQxY2JiM2FhMzIzZDVkOGQyOTI3ZWRiN2ExNjI1YjYzNDUxNjEyYWI5Njg3NGM3NDFkZCIsInRhZyI6IiJ9\",\n                \"name\": \"A officia ut quis ut quos.\",\n                \"price\": 19072,\n                \"image\": \"https://via.placeholder.com/640x480.png/0044cc?text=labore\"\n            },\n            {\n                \"id\": \"eyJpdiI6IjJzTWRadXRVVFQwbEtXSW4yM3RidUE9PSIsInZhbHVlIjoiM1FuM0pnR2hYV1AwQXpoVG9mdzllUT09IiwibWFjIjoiMzZmNGU1NDQxNTY5MzJhMDdkYmFjNTc1MDVjOTI0OThmMjY4NDlmN2I1NGExYjU2OTExZTlhMWM4NjFhMTRkOSIsInRhZyI6IiJ9\",\n                \"name\": \"Ab voluptate aut est totam expedita.\",\n                \"price\": 37585,\n                \"image\": \"https://via.placeholder.com/640x480.png/009933?text=incidunt\"\n            },\n            {\n                \"id\": \"eyJpdiI6ImcyN2JiN0hxVEdHcmJrUktCR29xT2c9PSIsInZhbHVlIjoibzZrWXRwVEt4cnordjE4UzNIeFRJUT09IiwibWFjIjoiMzk0N2NmMWNkMDNhMzIxODZhMzQ2MTdkNzA0Y2U2NmIxNWM4ZGY2YjEzMDFlNTZhYjZmMjljZDQ5ZTU1NjU0MCIsInRhZyI6IiJ9\",\n                \"name\": \"Adipisci quae laboriosam ducimus quia.\",\n                \"price\": 48084,\n                \"image\": \"https://via.placeholder.com/640x480.png/00ddbb?text=eum\"\n            },\n            {\n                \"id\": \"eyJpdiI6Iko3VlZNMk9WSnVmVm10d3RZTHB2S3c9PSIsInZhbHVlIjoib0wyT2tpK0c1eHZBTnJWQ3AvdGxaZz09IiwibWFjIjoiM2M2YjVhOTVhOTRiOWM1ODg2NmQ5YWEzOGFiNmNlM2E5ZmFhY2I3OTBlYmU3ZGU3Nzg2MzM3MWUwMjk4N2M2YiIsInRhZyI6IiJ9\",\n                \"name\": \"Adipisci qui qui est possimus.\",\n                \"price\": 29802,\n                \"image\": \"https://via.placeholder.com/640x480.png/00cc55?text=ea\"\n            },\n            {\n                \"id\": \"eyJpdiI6Ims2ZWo0SGoxcDJNRkUzY1RkdzI2VEE9PSIsInZhbHVlIjoiTC8yazJjY3N2a0tSRkpNZmlxWDlNUT09IiwibWFjIjoiNWM1YmI0YjZkMmY2NWE0OTUyNDdmMmIxZDYyMzg4Y2EzMzM4MDg5MmZjZTVjODg0YjhhZWQwNWEwNWQ1Njc5MiIsInRhZyI6IiJ9\",\n                \"name\": \"Aliquid doloremque occaecati doloribus assumenda.\",\n                \"price\": 71612,\n                \"image\": \"https://via.placeholder.com/640x480.png/00ddaa?text=veritatis\"\n            },\n            {\n                \"id\": \"eyJpdiI6ImpvSUZZS200MDN1YzlEV3QydGlyTkE9PSIsInZhbHVlIjoicUlaQmFZd0k2aUlKRTY4aW1BWHRKdz09IiwibWFjIjoiOGQ1YTc0YmYyNmI2MDA5NWIwNGM5MmMyZDUwNzhjZjgzOGEzMDFjMWI4NzQzOGRkMWQ1ODY2ZTIyODkwODNmMSIsInRhZyI6IiJ9\",\n                \"name\": \"Amet impedit et et sint.\",\n                \"price\": 6438,\n                \"image\": \"https://via.placeholder.com/640x480.png/0000ee?text=dolorem\"\n            },\n            {\n                \"id\": \"eyJpdiI6IjNqU1U1VFN5ZHlvci9TS1RDYitLL0E9PSIsInZhbHVlIjoidjYxT2N3RCtWL2dKcWErSXViWGFNQT09IiwibWFjIjoiOGM3MjY0OTIwMGQ3ODk2YzliODUwMGE1YzYwMWE5MTI5YWFjZTE1ODllOTRmZmQxYzdlYjUyNmJkYzcyNDZmYiIsInRhZyI6IiJ9\",\n                \"name\": \"Animi quidem autem ut rem et earum minima facere.\",\n                \"price\": 99376,\n                \"image\": \"https://via.placeholder.com/640x480.png/002277?text=vitae\"\n            },\n            {\n                \"id\": \"eyJpdiI6IkVjS21QRlNKUWlObG1mdk9zYkFHd3c9PSIsInZhbHVlIjoiRzFzYTN2Mk5kQnhrbExvbEQ0VnduQT09IiwibWFjIjoiY2MwZWFlNjdjYTNkYjJjODdhYWI4MGRkZTBkMzMwMThiZTM2Mjc5MmZiMWQ2NGJkZmIyOTMzMzRmNjZlMmI5YiIsInRhZyI6IiJ9\",\n                \"name\": \"Aperiam consectetur tenetur ut sunt voluptas quibusdam numquam.\",\n                \"price\": 64576,\n                \"image\": \"https://via.placeholder.com/640x480.png/00aa33?text=dolores\"\n            },\n            {\n                \"id\": \"eyJpdiI6IjdjRmVSTlJaTE1sNUJkZzFFWTJ3dFE9PSIsInZhbHVlIjoieE8vbmhiZ2IvZHpZRVFVZUJOeW44QT09IiwibWFjIjoiNzZiYjYxOThiMTBhMzI3MmY2MjljZWRhOGE1MWQyOTc3NWQ0ZjA2NmQwMWJkYzdkMzg1YzMwY2YzMjZlMjkwNiIsInRhZyI6IiJ9\",\n                \"name\": \"Aperiam nihil vel magnam deleniti quisquam rerum ratione.\",\n                \"price\": 84896,\n                \"image\": \"https://via.placeholder.com/640x480.png/00ccee?text=rerum\"\n            },\n            {\n                \"id\": \"eyJpdiI6IkZFcVhxZ2ZPL1MySE1CQWlkK1QyNEE9PSIsInZhbHVlIjoiaXZwWEMyUEtzUXJZekY1REhiVmVvUT09IiwibWFjIjoiYThhNTkyYzhhOGU0OTkxOThmZDdlMDYxYzY3NDhhMzI3ZjAzOGFhNmU5YzYyMWZkODI3NWZkOTNmOWM5YjBmYSIsInRhZyI6IiJ9\",\n                \"name\": \"Aspernatur aut non debitis fugiat vero ea maxime est.\",\n                \"price\": 21809,\n                \"image\": \"https://via.placeholder.com/640x480.png/004433?text=voluptas\"\n            }\n        ]\n    },\n    \"message\": \"Get data book successfully.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Add",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "Test2",
+													"description": "required",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "200002",
+													"description": "required|integer",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "https://via.placeholder.com/640x480.png/006644?text=voluptates",
+													"description": "required|url image",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/product/add",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"product",
+												"add"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Example",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "formdata",
+													"formdata": [
+														{
+															"key": "name",
+															"value": "Test2",
+															"description": "required",
+															"type": "text"
+														},
+														{
+															"key": "price",
+															"value": "200002",
+															"description": "required|integer",
+															"type": "text"
+														},
+														{
+															"key": "image",
+															"value": "https://via.placeholder.com/640x480.png/006644?text=voluptates",
+															"description": "required|url image",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/product/add",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"product",
+														"add"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 11:48:40 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 11:48:40 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "59"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 201,\n    \"data\": null,\n    \"message\": \"Create product successfully.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Edit",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "urlencoded",
+											"urlencoded": [
+												{
+													"key": "name",
+													"value": "aaa",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "2000",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "https://via.placeholder.com/640x480.png/0044cc?text=222",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/users/product/edit/:id?name=aaa&price=2000&image=https://via.placeholder.com/640x480.png/0044cc?text=222",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"users",
+												"product",
+												"edit",
+												":id"
+											],
+											"query": [
+												{
+													"key": "name",
+													"value": "aaa",
+													"description": "required"
+												},
+												{
+													"key": "price",
+													"value": "2000",
+													"description": "required|integer"
+												},
+												{
+													"key": "image",
+													"value": "https://via.placeholder.com/640x480.png/0044cc?text=222",
+													"description": "required|url"
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eyJpdiI6IkhoN3BkNGJmYnI2ZEkzMVZUQy90QUE9PSIsInZhbHVlIjoieXhXSFdVbGJsOWJpSmg3ODdFOWZWZz09IiwibWFjIjoiYmYyYTc1YTg4OGMyZjViZjY1M2NiZWE0ZDgxZjk2ODliY2M4NTc1ZmQ5ZTZmMTFkNTRhNTMxMzljM2VmNzJjOSIsInRhZyI6IiJ9",
+													"description": "required|exists"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Edit",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "urlencoded",
+													"urlencoded": [
+														{
+															"key": "id",
+															"value": "eyJpdiI6InpVQW8ydU5hUDIzTGlyK2hWakN0U1E9PSIsInZhbHVlIjoid0t2MmpwTmhmLzBkS0kwcGl5emY5QT09IiwibWFjIjoiMzZhNmZlNDg4YmE0ZWI5NDYyOGE2ZGE0ZDYzNmQwMjYyOWI3Y2Y3NWNiOWMwNTk3NTdjY2IwNTM3YTBmNzBkZSIsInRhZyI6IiJ9",
+															"type": "text"
+														},
+														{
+															"key": "name",
+															"value": "aaa",
+															"description": "required",
+															"type": "text"
+														},
+														{
+															"key": "price",
+															"value": "2000",
+															"description": "required|integer",
+															"type": "text"
+														},
+														{
+															"key": "image",
+															"value": "https://via.placeholder.com/640x480.png/0044cc?text=222",
+															"description": "required|url",
+															"type": "text"
+														}
+													]
+												},
+												"url": {
+													"raw": "{{base_url}}/product/edit/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"product",
+														"edit",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "eyJpdiI6InpVQW8ydU5hUDIzTGlyK2hWakN0U1E9PSIsInZhbHVlIjoid0t2MmpwTmhmLzBkS0kwcGl5emY5QT09IiwibWFjIjoiMzZhNmZlNDg4YmE0ZWI5NDYyOGE2ZGE0ZDYzNmQwMjYyOWI3Y2Y3NWNiOWMwNTk3NTdjY2IwNTM3YTBmNzBkZSIsInRhZyI6IiJ9"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 13:55:55 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 13:55:55 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "58"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 201,\n    \"data\": null,\n    \"message\": \"Update product successfully.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/users/product/delete/:id",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"users",
+												"product",
+												"delete",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "eyJpdiI6IkhoN3BkNGJmYnI2ZEkzMVZUQy90QUE9PSIsInZhbHVlIjoieXhXSFdVbGJsOWJpSmg3ODdFOWZWZz09IiwibWFjIjoiYmYyYTc1YTg4OGMyZjViZjY1M2NiZWE0ZDgxZjk2ODliY2M4NTc1ZmQ5ZTZmMTFkNTRhNTMxMzljM2VmNzJjOSIsInRhZyI6IiJ9"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "New Request",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/product/delete/:id",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"product",
+														"delete",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "eyJpdiI6InpVQW8ydU5hUDIzTGlyK2hWakN0U1E9PSIsInZhbHVlIjoid0t2MmpwTmhmLzBkS0kwcGl5emY5QT09IiwibWFjIjoiMzZhNmZlNDg4YmE0ZWI5NDYyOGE2ZGE0ZDYzNmQwMjYyOWI3Y2Y3NWNiOWMwNTk3NTdjY2IwNTM3YTBmNzBkZSIsInRhZyI6IiJ9"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Host",
+													"value": "localhost:8001"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 13:57:51 GMT"
+												},
+												{
+													"key": "Date",
+													"value": "Tue, 22 Aug 2023 13:57:51 GMT"
+												},
+												{
+													"key": "Connection",
+													"value": "close"
+												},
+												{
+													"key": "X-Powered-By",
+													"value": "PHP/8.1.12"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, private"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "X-RateLimit-Limit",
+													"value": "60"
+												},
+												{
+													"key": "X-RateLimit-Remaining",
+													"value": "57"
+												},
+												{
+													"key": "Access-Control-Allow-Origin",
+													"value": "*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"code\": 400,\n    \"data\": null,\n    \"message\": \"Product deleted successfully.\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8001/api",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDEvYXBpL2xvZ2luIiwiaWF0IjoxNjkyNzAyMzU1LCJleHAiOjE2OTI3MDU5NTUsIm5iZiI6MTY5MjcwMjM1NSwianRpIjoiZTJJdmt5WDJmR1lsYUtlcCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ogya7lApVnP6BeDkQNAYQnHJ978fPlE41qHQXXfgXYo",
+			"type": "string"
+		}
+	]
+}
